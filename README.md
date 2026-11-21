@@ -1,10 +1,22 @@
-> **Global Solution 2026.2 | CitizenTech** · **Disciplina:** Computational Thinking with Python
+<div align="center">
 
 # 💊 Memora · Central do Cuidador
 
-Simulação em terminal da Central do Cuidador, a parte do Memora em que a família acompanha os remédios de uma pessoa idosa.
+**Onde a família acompanha, pelo terminal, os remédios de uma pessoa idosa com Alzheimer**
 
-## 📌 Descrição do projeto
+Cadastro de remédios e horários, registro de cada retirada, resumo da semana, aviso de estoque baixo e rede de contatos, com os dados salvos em JSON.
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![JSON](https://img.shields.io/badge/dados-JSON-555555?style=flat-square&logo=json&logoColor=white)
+![Sem dependências](https://img.shields.io/badge/depend%C3%AAncias-nenhuma-2E7D32?style=flat-square)
+
+<sub>Computational Thinking with Python · Global Solution 2026.2 · CitizenTech · FIAP</sub>
+
+</div>
+
+---
+
+## Sobre o projeto
 
 Para quem cuida de alguém com Alzheimer, uma das perguntas mais repetidas do dia é: *"será que ela tomou o remédio?"*. A pessoa idosa nem sempre lembra se já tomou, e a família, muitas vezes longe, fica sem ter certeza.
  
@@ -14,7 +26,7 @@ Este repositório traz a **Central do Cuidador em Python**, com um menu no termi
  
 O objetivo é simples: trocar a dúvida por informação, para que a família saiba quando está tudo bem e perceba rápido quando algo precisa de atenção.
 
-## 🩺 Como o Memora funciona
+## Como o Memora funciona
 
 O funcionamento começa com o cadastro da pessoa acompanhada. Depois, o cuidador informa os medicamentos, a dosagem, os horários previstos, a quantidade disponível e a data de início do acompanhamento.
 
@@ -29,7 +41,7 @@ Essas informações são usadas para mostrar as doses do dia e produzir um resum
 
 > **Importante:** nesta versão, os acontecimentos são informados manualmente. O programa registra a *retirada* do medicamento, não confirma que ele foi ingerido.
 
-## ⚙️ Funcionalidades implementadas
+## Funcionalidades
 
 | Opção | Funcionalidade |
 |-------|----------------|
@@ -48,7 +60,7 @@ Essas informações são usadas para mostrar as doses do dia e produzir um resum
 
 O menu é dividido em **Cadastros**, **Acompanhamento** e **Outras opções** para facilitar a navegação.
 
-## 👵 Exemplo de utilização
+## Exemplo de utilização
 
 Imagine que uma cuidadora acompanha Dona Lurdes, que possui um medicamento programado para **08:00 e 14:00**.
 
@@ -61,7 +73,7 @@ Imagine que uma cuidadora acompanha Dona Lurdes, que possui um medicamento progr
 
 Para uma apresentação rápida, a **opção [8]** cria automaticamente um exemplo com **Dona Lurdes**, o **Remédio A**, dois contatos e registros fictícios dos seis dias anteriores. Assim, é possível consultar o relatório sem fazer todos os cadastros manualmente. O exemplo não é duplicado se já existir.
 
-## ▶️ Como executar
+## Como executar
 
 ### Pré-requisitos
 
@@ -69,7 +81,7 @@ Para uma apresentação rápida, a **opção [8]** cria automaticamente um exemp
   Verifique com: `python --version` ou `python3 --version`
 - Não é necessário instalar bibliotecas externas.
 
-### 🟢 Pelo terminal (qualquer sistema)
+### Pelo terminal
 
 ```bash
 # Clone o repositório
@@ -83,7 +95,8 @@ python Memora.py    # Windows (ou: py Memora.py)
 python3 Memora.py   # Linux / Mac
 ```
 
-### 🟡 Pelo PyCharm
+<details>
+<summary><b>Pelo PyCharm</b></summary>
 
 1. Abra o PyCharm e clique em **File > Open**
 2. Selecione a pasta do projeto (central-do-cuidador)
@@ -92,7 +105,10 @@ python3 Memora.py   # Linux / Mac
 5. Clique em **Run 'Memora'**
 6. O terminal integrado abrirá na parte inferior com o programa rodando
 
-### 🔵 Pelo VS Code
+</details>
+
+<details>
+<summary><b>Pelo VS Code</b></summary>
 
 1. Abra o VS Code e clique em **File > Open Folder**
 2. Selecione a pasta do projeto (central-do-cuidador)
@@ -102,9 +118,11 @@ python3 Memora.py   # Linux / Mac
 5. Clique no botão **▶ Run Python File** no canto superior direito ou use o atalho `Ctrl + F5`
 6. O terminal integrado abrirá na parte inferior com o programa rodando
 
+</details>
+
 Para selecionar uma funcionalidade, basta digitar o número da opção e pressionar **Enter**. As datas seguem o formato brasileiro **DD/MM/AAAA**; quando o programa oferece essa possibilidade, pressionar **Enter** utiliza a data de hoje.
 
-## 🗂️ Estrutura do repositório
+## Estrutura
 
 ```
 central-do-cuidador/
@@ -113,7 +131,10 @@ central-do-cuidador/
 └── prompts.md           ← Uso de inteligência artificial no projeto
 ```
 
-## 💬 Organização interna do código
+## Organização interna do código
+
+<details>
+<summary><b>Ver as funções do <code>Memora.py</code></b></summary>
 
 ```
 Memora.py
@@ -159,7 +180,9 @@ Memora.py
 └── main() ← loop principal do programa
 ```
 
-## 💾 Persistência de dados
+</details>
+
+## Dados salvos
 
 O Memora utiliza arquivos **JSON** para guardar as informações entre uma execução e outra:
 
@@ -172,7 +195,7 @@ O sistema valida números, datas e horários, impede registros duplicados da mes
 
 > **Atenção:** excluir uma pessoa ou um medicamento também apaga seus registros relacionados. É recomendável fazer uma cópia do `dados.json` antes de testar exclusões.
 
-## ⚠️ Limitações desta versão
+## Limitações desta versão
 
 A Central do Cuidador é um **protótipo acadêmico executado no terminal**. Nesta versão:
 
@@ -182,16 +205,16 @@ A Central do Cuidador é um **protótipo acadêmico executado no terminal**. Nes
 - A estimativa de estoque considera uma unidade por horário cadastrado.
 - O sistema não confirma a ingestão do medicamento e não substitui acompanhamento médico.
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **Python 3.10+:** funcionamento do programa e menu interativo.
 - **JSON:** armazenamento dos cadastros e relatórios.
 - **Bibliotecas padrão `json`, `os` e `datetime`:** arquivos, datas e horários.
 
-## 👩‍💻 Equipe
+## Equipe
 
 | Nome | RM |
-|------|----|
+|---|---|
 | Eric Kang | 572575 |
 | Guilherme Tomé Nogueira | 570144 |
 | Lucas de Andrade Astorini | 569119 |
